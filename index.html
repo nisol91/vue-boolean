@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Primi passi Vue.js</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" media="screen" href="style.css">
+	<link rel="stylesheet" type="text/css" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.css">
+	<script src="vue.js"></script>
+	<script src="main.js"></script>
+</head>
+<body>
+	<div id="root">
+		<input type="text" placeholder="Inserisci il tuo nome" v-model="name">
+		<input type="text" placeholder="Inserisci la tua citta" v-model="city">
+
+		<p>Ciao: {{name}}, provieni da {{city}}</p>
+		<div class="separatore"></div>
+		<h1>Insegnanti: </h1>
+		<h3 v-for="teacher in teachers">
+			{{teacher}}
+		</h3>
+		<input type="text" placeholder="Inserisci un nuovo insegnante" v-model="newTeacher" @keyup.13="addTeacher">
+		<button @click="addTeacher">Aggiungi Insegnante</button>
+	</div>
+</body>
+<script src="main.js"></script>
+</html>
