@@ -8,7 +8,6 @@
 	<link rel="stylesheet" type="text/css" media="screen" href="style.css">
 	<link rel="stylesheet" type="text/css" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.css">
 	<script src="vue.js"></script>
-	<script src="main.js"></script>
 </head>
 <body>
 	<div id="root">
@@ -23,6 +22,12 @@
 		</h3>
 		<input type="text" placeholder="Inserisci un nuovo insegnante" v-model="newTeacher" @keyup.13="addTeacher">
 		<button @click="addTeacher">Aggiungi Insegnante</button>
+		<div class="separatore"></div>
+		<h1>Studenti: </h1>
+		<h3 v-for="student in students">
+			{{student.lastname}},
+			{{student.name}}
+		</h3>
 	</div>
 </body>
 <script src="main.js"></script>

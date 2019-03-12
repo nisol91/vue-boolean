@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Primi passi Vue.js</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" media="screen" href="style.css">
+	<link rel="stylesheet" type="text/css" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.css">
+	<script src="vue.js"></script>
+</head>
+<body>
+	<div id="root">
+		<h1 v-bind:class="classes">v-bind mi sta in ascolto di un particolare attributo. quello che mi restituisce e' in questo caso un array nei data, che mi indica le classi</h1>
+		<button @click="changeClasses">Cambia classi</button>
+
+		<h1 v-text="saluta"></h1>
+		<print-message message="vari modi per passare valori dal componente agli elementi html"></print-message>
+		<print-message message="vengo dalle props message, e dipendo da quello che e' scritto qui "></print-message>
+
+		<bulma-message messagetitle="ciao 1" messagedescription="Milano"></bulma-message>
+		<bulma-message messagetitle="ciao 2" messagedescription="Torino"></bulma-message>
+		<bulma-message messagetitle="ciao 3" messagedescription="Roma"></bulma-message>
+
+	</div>
+</body>
+<script src="main_component.js"></script>
+</html>
